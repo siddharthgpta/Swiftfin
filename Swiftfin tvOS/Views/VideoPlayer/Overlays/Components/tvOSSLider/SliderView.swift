@@ -37,7 +37,9 @@ struct tvOSSliderView: UIViewRepresentable {
         return slider
     }
 
-    func updateUIView(_ uiView: UITVOSSlider, context: Context) {}
+    func updateUIView(_ uiView: UITVOSSlider, context: Context) {
+        uiView.value = Float(value) * Float(maxValue)
+    }
 }
 
 extension tvOSSliderView {
